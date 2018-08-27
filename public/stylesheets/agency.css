@@ -213,7 +213,7 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: linear-gradient(rgba(136,136,136,0.3), rgba(136,136,136,0.3)), url("../img/1.jpeg");
+  background-image: linear-gradient(rgba(136,136,136,0.5), rgba(136,136,136,0.5)), url("../img/1.jpeg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
