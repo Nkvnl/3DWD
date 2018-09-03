@@ -4,9 +4,14 @@
   animation-play-state: paused !important;
 }
 
+#page-top{
+  max-height:100%;
+}
+
 body {
   overflow-x: hidden;
   font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /*background:black!important;*/
 }
 
 .portfolio-h{
@@ -790,6 +795,8 @@ section#contact :-ms-input-placeholder {
 footer {
   padding: 25px 0;
   text-align: center;
+  overflow: hidden!important;
+  /*margin-bottom: 200px!important;*/
 }
 
 footer span.copyright {
@@ -835,6 +842,11 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .carousel-inner{
   height:100%;
+}
+
+.blog{
+  padding-top:300px;
+  padding-bottom:300px;
 }
 
 .caption-blog{
@@ -940,7 +952,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .blog-banner{
   background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  height:500px;
+  height:800px;
   background-position:center center;
 }
 
