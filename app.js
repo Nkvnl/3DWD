@@ -89,7 +89,7 @@ app.post("/signup", (req, res) => {
         port: 587,
         auth: {
             user: 'mailserver163@gmail.com',
-            pass: 'ma1ls3rv3r'
+            pass: 'HIB56JIB79BONc'
         }
     });
     // setup email data with unicode symbols
@@ -137,7 +137,7 @@ app.post("/send", (req, res) => {
         port: 587,
         auth: {
             user: 'mailserver163@gmail.com',
-            pass: 'ma1ls3rv3r'
+            pass: 'HIB56JIB79BONc'
         }
     });
     // setup email data with unicode symbols
