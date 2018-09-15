@@ -3,6 +3,7 @@ var bodyParser = require("body-parser");
 var nodemailer = require("nodemailer");
 var compression = require('compression');
 var app = express();
+var path = require('path');
 
 
 app.set("view engine", "ejs");
@@ -11,17 +12,19 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(compression());
+app.use(express.static(path.join(__dirname, 'public')));
 app.get("/", function(req, res) {
     res.render("theme-blue");
 });
-app.use(function(req, res, next) {
 
-    // static folder: css
-    if (req.url.indexOf('/css/') === 0) {
-        res.setHeader('Cache-Control', 'public, max-age=345600'); // 4 days
-        res.setHeader('Expires', new Date(Date.now() + 345600000).toUTCString());
+
+app.get('/*', function(req, res, next) {
+
+    if (req.url.indexOf("/images/") === 0 || req.url.indexOf("/stylesheets/") === 0) {
+        res.setHeader("Cache-Control", "public, max-age=2592000");
+        res.setHeader("Expires", new Date(Date.now() + 2592000000).toUTCString());
     }
-
+    next();
 });
 
 app.post("/send", (req, res) => {
