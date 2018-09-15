@@ -83,7 +83,7 @@ body {
   animation-delay: 2.5s;
 }
 
-.welkom{
+.welkom h1{
   font-size:50%;
 }
 
@@ -209,7 +209,7 @@ img::-moz-selection {
 /*}*/
 
 .comp{
-  color:white;
+  color:white!important;
   font-family: 'Krona One', sans-serif;
 }
 
@@ -220,14 +220,20 @@ img::-moz-selection {
   font-size:80%;
 }
 
-.comp3{
+.comp3 h1{
+  color:white!important;
   font-size:120%!important;
     font-family: 'Krona One', sans-serif!important;
     margin:auto;
+    font-weight:normal;
 }
 
 .comp1{
   color:#BCBBC0;
+}
+
+.comp1{
+  color:#BCBBC0 !important;
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
@@ -270,7 +276,7 @@ img::-moz-selection {
     padding-top: 0;
     padding-bottom: 0;
     background-color: #212529;
-      box-shadow:0px 30px 60px rgba(0,0,0,0.5);
+      box-shadow:0px 10px 20px rgba(0,0,0,0.5);
       transition:0.3s;
 
   }
