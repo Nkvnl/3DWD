@@ -270,6 +270,9 @@ img::-moz-selection {
     padding-top: 0;
     padding-bottom: 0;
     background-color: #212529;
+      box-shadow:0px 30px 60px rgba(0,0,0,0.5);
+      transition:0.3s;
+
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -279,6 +282,7 @@ img::-moz-selection {
 
 .fa-circle{
   color:#688b9b!important;
+  text-shadow:0px 10px 20px rgba(0,0,0,0.5);
 }
 
 header.masthead {
@@ -346,9 +350,15 @@ header.masthead .intro-text .intro-heading {
   text-transform: none;
 }
 
+#portfolio img{
+    box-shadow:00px 30px 60px rgba(0,0,0,0.5);
+
+}
+
 #portfolio .portfolio-item {
   right: 0;
   margin: 0 0 15px;
+  
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -484,6 +494,7 @@ header.masthead .intro-text .intro-heading {
 .btn-primary-custom{
   color:white;
   background-color:#688b9b;
+  box-shadow:0px 30px 60px rgba(0,0,0,0.5);
 }
 
 .portfolio-modal .close-modal {

@@ -14,6 +14,15 @@ app.use(compression());
 app.get("/", function(req, res) {
     res.render("theme-blue");
 });
+app.use(function(req, res, next) {
+
+    // static folder: css
+    if (req.url.indexOf('/css/') === 0) {
+        res.setHeader('Cache-Control', 'public, max-age=345600'); // 4 days
+        res.setHeader('Expires', new Date(Date.now() + 345600000).toUTCString());
+    }
+
+});
 
 app.post("/send", (req, res) => {
     var name = (req.body.name);
