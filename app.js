@@ -18,15 +18,6 @@ app.get("/", function(req, res) {
 });
 
 
-app.get('/*', function(req, res, next) {
-
-    if (req.url.indexOf("/images/") === 0 || req.url.indexOf("/stylesheets/") === 0) {
-        res.setHeader("Cache-Control", "public, max-age=2592000");
-        res.setHeader("Expires", new Date(Date.now() + 2592000000).toUTCString());
-    }
-    next();
-});
-
 app.post("/send", (req, res) => {
     var name = (req.body.name);
     var output = `
