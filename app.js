@@ -4,19 +4,6 @@ var nodemailer = require("nodemailer");
 var compression = require('compression');
 var app = express();
 var path = require('path');
-var robots = require('robots'),
-    parser = new robots.RobotsParser();
-
-parser.setUrl('http://www.3dwebdevelopment.com/robots.txt', function(parser, success) {
-    if (success) {
-        parser.canFetch('*', 'robots.txt', function(access) {
-            if (access) {
-                // parse url
-            }
-        });
-    }
-});
-
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
