@@ -4,6 +4,18 @@ var nodemailer = require("nodemailer");
 var compression = require('compression');
 var app = express();
 var path = require('path');
+var robots = require('robots');
+var parser = new robots.RobotsParser();
+
+parser.setUrl('http://nodeguide.ru/robots.txt', function(parser, success) {
+    if (success) {
+        parser.canFetch('*', '/doc/dailyjs-nodepad/', function(access) {
+            if (access) {
+                // parse url
+            }
+        });
+    }
+});
 
 
 app.set("view engine", "ejs");
@@ -14,10 +26,6 @@ app.use(bodyParser.json());
 app.use(compression());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/robots.txt', function(req, res, next) {
-    res.type('text/plain');
-    res.send("User-agent: *\nDisallow: /");
-});
 
 app.get("/", function(req, res) {
     res.render("theme-blue");
