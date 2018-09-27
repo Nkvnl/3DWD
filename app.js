@@ -13,6 +13,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(compression());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/robots.txt', function(req, res, next) {
+    res.type('text/plain');
+    res.send("User-agent: *\nDisallow: /");
+});
+
 app.get("/", function(req, res) {
     res.render("theme-blue");
 });
