@@ -4,12 +4,12 @@ var nodemailer = require("nodemailer");
 var compression = require('compression');
 var app = express();
 var path = require('path');
-var robots = require('robots');
-var parser = new robots.RobotsParser();
+var robots = require('robots'),
+    parser = new robots.RobotsParser();
 
-parser.setUrl('http://nodeguide.ru/robots.txt', function(parser, success) {
+parser.setUrl('http://www.3dwebdevelopment.com/robots.txt', function(parser, success) {
     if (success) {
-        parser.canFetch('*', '/doc/dailyjs-nodepad/', function(access) {
+        parser.canFetch('*', 'robots.txt', function(access) {
             if (access) {
                 // parse url
             }
