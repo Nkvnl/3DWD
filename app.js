@@ -14,8 +14,56 @@ app.use(compression());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.get("/", function(req, res) {
-    res.render("theme-blue");
+app.get("/home", function(req, res) {
+    res.render("index");
+});
+
+app.get("/website-laten-bouwen", function(req, res) {
+    res.render("bouwen");
+});
+
+app.get("/website-bouwer-emmen", function(req, res) {
+    res.render("bouwer");
+});
+
+app.get("/website-laten-maken", function(req, res) {
+    res.render("maken");
+});
+
+app.get("/website-maker-emmen", function(req, res) {
+    res.render("maker");
+});
+
+app.get("/webdesign", function(req, res) {
+    res.render("webdesign");
+});
+
+app.get("/goedkope-website-laten-maken", function(req, res) {
+    res.render("goedkoop-m");
+});
+
+app.get("/goedkope-website-laten-bouwen", function(req, res) {
+    res.render("goedkoop-b");
+});
+
+app.get("/eigen-website", function(req, res) {
+    res.render("eigen");
+});
+
+app.get("/eigen-website-goedkoop", function(req, res) {
+    res.render("eigen-g");
+});
+
+app.get("/website/kosten", function(req, res) {
+    res.render("website-k");
+});
+
+app.get("/website-bouwer-emmen/kosten", function(req, res) {
+    res.render("website-bouwer-k");
+});
+
+app.get("/website-maker-emmen/kosten", function(req, res) {
+    res.render("website-maker-k");
 });
 
 
