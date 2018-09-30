@@ -220,7 +220,7 @@ img::-moz-selection {
   font-size:80%;
 }
 
-.comp3 h1{
+.comp3{
   color:white!important;
   font-size:120%!important;
     font-family: 'Krona One', sans-serif!important;
@@ -310,12 +310,12 @@ header.masthead .intro-text {
   padding-bottom: 100px;
 }
 
-header.masthead .intro-text .intro-lead-in {
-  font-size: 120%!important;
-  font-style: italic;
-  line-height: 22px;
-  margin-bottom: 25px;
-  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+.intro-lead-in h1{
+  font-size: 70%!important;
+  font-style: italic!important;
+  line-height: 22px!important;
+  margin-bottom: 25px!important;
+  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif!important;
 }
 
 header.masthead .intro-text .intro-heading {
@@ -365,6 +365,12 @@ header.masthead .intro-text .intro-heading {
   right: 0;
   margin: 0 0 15px;
   
+}
+
+.logo1 img{
+  border-radius:50%;
+  box-shadow:0px 40px 80px rgba(0,0,0,0.3);
+  width:70%;
 }
 
 #portfolio .portfolio-item .portfolio-link {
