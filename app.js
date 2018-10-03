@@ -18,6 +18,22 @@ app.get("/", function(req, res) {
     res.render("index");
 });
 
+app.get("/nieuwe-website", function(req, res) {
+    res.render("4effecten");
+});
+
+app.get("/9-feiten-responsive-design", function(req, res) {
+    res.render("9feiten");
+});
+
+app.get("/seo", function(req, res) {
+    res.render("seo");
+});
+
+app.get("/responsive-design", function(req, res) {
+    res.render("rd");
+});
+
 app.get("/website-laten-bouwen", function(req, res) {
     res.render("bouwen");
 });
