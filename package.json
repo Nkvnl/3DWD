@@ -17,6 +17,7 @@
     "dotenv": "^6.0.0",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
+    "express-robots-txt": "^0.4.0",
     "express-validator": "^5.2.0",
     "fontawesome": "^4.7.2",
     "handlebars": "^4.0.11",
