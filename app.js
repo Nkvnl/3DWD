@@ -4,6 +4,9 @@ var nodemailer = require("nodemailer");
 var compression = require('compression');
 var app = express();
 var path = require('path');
+var robots = require('express-robots-txt');
+var sitemap = require('express-sitemap');
+
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -12,7 +15,35 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(compression());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(robots({ UserAgent: '*', Disallow: '/' }))
 
+
+sitemap({
+    map: {
+        '/': ['get'],
+        '/seo': ['get'],
+        '/responsive-design': ['get'],
+        '/9-feiten-responsive-design': ['get'],
+        '/nieuwe website': ['get'],
+    },
+    route: {
+        '/': {
+
+        },
+        '/seo': {
+
+        },
+        '/responsive-design': {
+
+        },
+        '/9-feiten-responsive-design': {
+
+        },
+        '/nieuwe website': {
+
+        },
+    },
+}).XMLtoFile();
 
 app.get("/", function(req, res) {
     res.render("index");
