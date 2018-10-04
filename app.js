@@ -16,6 +16,10 @@ app.use(bodyParser.json());
 app.use(compression());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(robots({ UserAgent: '*', Disallow: '' }))
+app.use((req, res, next) => {
+    res.header('Cache-Control', 'max-age=2592000000');
+    next();
+});
 
 
 sitemap({
