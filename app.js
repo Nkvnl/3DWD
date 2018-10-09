@@ -43,7 +43,16 @@ sitemap({
         '/9-feiten-responsive-design': {
 
         },
-        '/nieuwe website': {
+        '/nieuwe-website': {
+
+        },
+        '/webdesign-emmen': {
+
+        },
+        '/website-laten-maken': {
+
+        },
+        '/website-emmen': {
 
         },
     },
@@ -69,8 +78,8 @@ app.get("/responsive-design", function(req, res) {
     res.render("rd");
 });
 
-app.get("/website-laten-bouwen", function(req, res) {
-    res.render("bouwen");
+app.get("/website-emmen", function(req, res) {
+    res.render("website-emmen");
 });
 
 app.get("/website-bouwer-emmen", function(req, res) {
@@ -81,11 +90,8 @@ app.get("/website-laten-maken", function(req, res) {
     res.render("maken");
 });
 
-app.get("/website-maker-emmen", function(req, res) {
-    res.render("maker");
-});
 
-app.get("/webdesign", function(req, res) {
+app.get("/webdesign-emmen", function(req, res) {
     res.render("webdesign");
 });
 
