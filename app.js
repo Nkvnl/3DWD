@@ -72,6 +72,10 @@ app.get("/nieuwe-website", function(req, res) {
     res.render("4effecten");
 });
 
+app.get("/website-voorbeeld", function(req, res) {
+    res.render("voorbeeld");
+});
+
 app.get("/9-feiten-responsive-design", function(req, res) {
     res.render("9feiten");
 });
