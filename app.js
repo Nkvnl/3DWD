@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 
 app.get('*', function(req, res, next) {
     if (req.headers['x-forwarded-proto'] != 'https')
-        res.redirect('https://mypreferreddomain.com' + req.url)
+        res.redirect('https://www.3dwebdevelopment.com' + req.url)
     else
         next() /* Continue to other routes if we're not redirecting */
 })
