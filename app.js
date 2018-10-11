@@ -7,6 +7,8 @@ var path = require('path');
 var robots = require('express-robots-txt');
 var sitemap = require('express-sitemap');
 var enforce = require('express-sslify');
+var http = require('http');
+
 
 
 app.set("view engine", "ejs");
@@ -125,6 +127,13 @@ app.get("/website-maker-emmen/kosten", function(req, res) {
 });
 
 app.use(enforce.HTTPS());
+
+http.createServer(app).listen(app.get('port'), function() {
+    console.log('Express server listening on port ' + app.get('port'));
+});
+
+app.use(enforce.HTTPS({ trustProtoHeader: true }))
+
 
 
 app.post("/send", (req, res) => {
