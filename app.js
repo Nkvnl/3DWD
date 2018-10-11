@@ -61,6 +61,9 @@ sitemap({
         '/website-emmen': {
 
         },
+        '/website-voorbeeld': {
+
+        },
     },
 }).XMLtoFile();
 
