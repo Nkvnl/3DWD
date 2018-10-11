@@ -6,8 +6,6 @@ var app = express();
 var path = require('path');
 var robots = require('express-robots-txt');
 var sitemap = require('express-sitemap');
-var enforce = require('express-sslify');
-var http = require('http');
 
 
 
@@ -24,7 +22,12 @@ app.use((req, res, next) => {
     next();
 });
 
-
+app.get('*', function(req, res, next) {
+    if (req.headers['x-forwarded-proto'] != 'https')
+        res.redirect('https://mypreferreddomain.com' + req.url)
+    else
+        next() /* Continue to other routes if we're not redirecting */
+})
 sitemap({
     map: {
         '/': ['get'],
@@ -125,15 +128,6 @@ app.get("/website-bouwer-emmen/kosten", function(req, res) {
 app.get("/website-maker-emmen/kosten", function(req, res) {
     res.render("website-maker-k");
 });
-
-app.use(enforce.HTTPS());
-
-http.createServer(app).listen(app.get('port'), function() {
-    console.log('Express server listening on port ' + app.get('port'));
-});
-
-app.use(enforce.HTTPS({ trustProtoHeader: true }))
-
 
 
 app.post("/send", (req, res) => {
