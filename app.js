@@ -101,10 +101,6 @@ app.get("/webdesign-emmen", function(req, res) {
     res.render("webdesign");
 });
 
-app.get("/goedkope-website-laten-maken", function(req, res) {
-    res.render("goedkoop-m");
-});
-
 app.get("/goedkope-website-laten-bouwen", function(req, res) {
     res.render("goedkoop-b");
 });
