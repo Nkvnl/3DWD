@@ -6,6 +6,7 @@ var app = express();
 var path = require('path');
 var robots = require('express-robots-txt');
 var sitemap = require('express-sitemap');
+var enforce = require('express-sslify');
 
 
 app.set("view engine", "ejs");
@@ -122,6 +123,8 @@ app.get("/website-bouwer-emmen/kosten", function(req, res) {
 app.get("/website-maker-emmen/kosten", function(req, res) {
     res.render("website-maker-k");
 });
+
+app.use(enforce.HTTPS());
 
 
 app.post("/send", (req, res) => {
