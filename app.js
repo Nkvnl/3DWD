@@ -68,6 +68,11 @@ app.get("/", function(req, res) {
     res.render("index");
 });
 
+
+app.get("/links", function(req, res) {
+    res.render("links");
+});
+
 app.get("/nieuwe-website", function(req, res) {
     res.render("4effecten");
 });
