@@ -89,8 +89,8 @@ app.get("/responsive-design", function(req, res) {
     res.render("rd");
 });
 
-app.get("/website-emmen", function(req, res) {
-    res.render("website-emmen");
+app.get("/websitebouwer-of-website-laten-bouwen", function(req, res) {
+    res.render("websitebouwer");
 });
 
 app.get("/website-bouwer-emmen", function(req, res) {
