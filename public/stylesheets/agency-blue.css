@@ -1237,7 +1237,7 @@ background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, F
   padding:250px;
 }
 
-#blog h2,h1{
+#blog h2{
   margin-top:100px;
   margin-bottom:50px;
   border-left:15px solid #43cea2;
