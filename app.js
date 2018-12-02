@@ -22,6 +22,8 @@ app.use((req, res, next) => {
     next();
 });
 
+
+app.set('port', (process.env.PORT || 3004))
 app.get('*', function(req, res, next) {
     if (req.headers['x-forwarded-proto'] != 'https')
         res.redirect('https://www.3dwebdevelopment.com' + req.url)
@@ -178,6 +180,6 @@ app.post("/send", (req, res) => {
     });
 });
 
-app.listen(process.env.PORT, process.env.IP, function() { // tell node to listen & define a port to view app
-    console.log("3D Web Dev server starting...");
+app.listen(app.get('port'), function() {
+    console.log('starting');
 });
